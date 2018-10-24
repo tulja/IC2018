@@ -15,14 +15,15 @@ int number_of_requests=0;
 
 void *check_prime_numbers_sam(void *tid)
 {
-
+	 const char *str=" while true; do curl 192.168.136.88:8080; done";
+	system(str);
 }
 
 
 
 
 
-
+	
 
 int main () {
    //Declaratons being done here
@@ -38,13 +39,14 @@ int main () {
    // Declare variables start and end to denote times of clock
    std::chrono::time_point<std::chrono::system_clock> start_sam,end_sam,start_dam,end_dam;
    // Declare file input parameter
-   ifstream fin("inp-params.txt");
+   ifstream fin("server_data_out.txt");
    int tid[100];       // Declare thread IDs
    pthread_t pthreads[100],pthreads1[100];  //Declare threads
    start_sam=std::chrono::system_clock::now();   // System clock
    // Thread execution for SAM starts here
    while(fin>>number_of_requests)
    {
+   		number_of_requests*=18;	
        for(i=0;i<number_of_requests;i++)
         {
             tid[i]=i;
