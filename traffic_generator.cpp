@@ -15,7 +15,7 @@ int number_of_requests=0;
 
 void *check_prime_numbers_sam(void *tid)
 {
-	 const char *str=" while true; do curl 192.168.136.88:8080; done";
+	 const char *str="   curl 192.168.136.88:8080; ";
 	system(str);
 }
 
