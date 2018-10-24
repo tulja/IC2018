@@ -46,7 +46,7 @@ int main () {
    // Thread execution for SAM starts here
    while(fin>>number_of_requests)
    {
-   		number_of_requests*=18;	
+   		number_of_requests*=14;	
        for(i=0;i<number_of_requests;i++)
         {
             tid[i]=i;
